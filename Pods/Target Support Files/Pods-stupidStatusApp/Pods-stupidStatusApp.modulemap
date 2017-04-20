@@ -1,0 +1,6 @@
+framework module Pods_stupidStatusApp {
+  umbrella header "Pods-stupidStatusApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

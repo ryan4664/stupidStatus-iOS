@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,7 @@ class ViewController: UIViewController {
     @IBAction func getNewStatus(_ sender: Any) {
         getStatus()
     }
+    @IBOutlet weak var bannerAd: GADBannerView!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -22,7 +24,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        //TEST
+        bannerAd.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        //PROD
+//        bannerAd.adUnitID = "ca-app-pub-2784831729284923/8946119498"
+        bannerAd.rootViewController = self
+        bannerAd.load(GADRequest())
         getStatus()
     }
 
