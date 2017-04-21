@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FIRApp.configure()
         //TEST
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-3940256099942544~1458002511")
+        //GADMobileAds.configure(withApplicationID: "ca-app-pub-3940256099942544~1458002511")
         //PROD
 //        GADMobileAds.configure(withApplicationID: "ca-app-pub-2784831729284923~7469386295")
         return true

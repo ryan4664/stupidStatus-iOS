@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,20 +19,38 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stupid Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNe-tb-5bX">
-                                <rect key="frame" x="70" y="28" width="235" height="68"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iRz-Zl-Oru">
+                                <rect key="frame" x="22" y="215.5" width="276" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBi-nU-AUF" customClass="GADBannerView">
+                                <rect key="frame" x="352" y="1316" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="05c-D1-i7r"/>
+                                    <constraint firstAttribute="width" constant="320" id="j5C-Kh-5Kc"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stupid Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNe-tb-5bX">
+                                <rect key="frame" x="50" y="30" width="924" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loT-mh-CM2">
-                                <rect key="frame" x="104" y="434" width="167" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0A-qE-Yr6">
+                                <rect key="frame" x="50" y="116" width="924" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loT-mh-CM2">
+                                <rect key="frame" x="374" y="1227" width="276" height="69"/>
                                 <color key="backgroundColor" red="0.20952406525611877" green="0.34997868537902832" blue="0.50367265939712524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
                                 <state key="normal" title="Get New Stupid Status">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -39,26 +58,22 @@
                                     <action selector="getNewStatus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WjA-Xg-3kL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0A-qE-Yr6">
-                                <rect key="frame" x="16" y="104" width="343" height="290"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBi-nU-AUF" customClass="GADBannerView">
-                                <rect key="frame" x="27" y="617" width="320" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="05c-D1-i7r"/>
-                                    <constraint firstAttribute="width" constant="320" id="j5C-Kh-5Kc"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.13331398367881775" green="0.13334444165229797" blue="0.13331207633018494" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="hBi-nU-AUF" firstAttribute="top" secondItem="loT-mh-CM2" secondAttribute="bottom" constant="20" id="20v-H6-2im"/>
                             <constraint firstItem="hBi-nU-AUF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HSB-Yt-Bpz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hBi-nU-AUF" secondAttribute="bottom" id="JRs-mT-UoK"/>
+                            <constraint firstItem="dNe-tb-5bX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="LXs-sk-b4i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dNe-tb-5bX" secondAttribute="trailing" constant="30" id="dYE-Rc-piC"/>
+                            <constraint firstItem="i0A-qE-Yr6" firstAttribute="top" secondItem="dNe-tb-5bX" secondAttribute="bottom" constant="50" id="erg-XT-ZZg"/>
+                            <constraint firstItem="i0A-qE-Yr6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="gLZ-mO-via"/>
+                            <constraint firstItem="dNe-tb-5bX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nEw-5a-9uB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i0A-qE-Yr6" secondAttribute="trailing" constant="30" id="s6k-KM-hy2"/>
+                            <constraint firstItem="dNe-tb-5bX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="ue6-B0-YOe"/>
+                            <constraint firstItem="i0A-qE-Yr6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xG3-h0-601"/>
+                            <constraint firstItem="dNe-tb-5bX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zEi-Go-9XJ"/>
+                            <constraint firstItem="loT-mh-CM2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zpm-hp-swA"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -69,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="135" y="136.25"/>
         </scene>
     </scenes>
 </document>

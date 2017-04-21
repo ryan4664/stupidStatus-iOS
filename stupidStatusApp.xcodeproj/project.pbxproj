@@ -26,6 +26,7 @@
 		1E019F311E059415001733D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E019F331E059415001733D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E57185A1EA870D1000CD7C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1EB4B9E71EA992DB00A469E8 /* stupidStatusApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = stupidStatusApp.entitlements; sourceTree = "<group>"; };
 		6012519158C0F4C686F08286 /* Pods-stupidStatusApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stupidStatusApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-stupidStatusApp/Pods-stupidStatusApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D0AD8073531CA4BEA05E860E /* Pods_stupidStatusApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stupidStatusApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -63,6 +64,7 @@
 		1E019F261E059415001733D0 /* stupidStatusApp */ = {
 			isa = PBXGroup;
 			children = (
+				1EB4B9E71EA992DB00A469E8 /* stupidStatusApp.entitlements */,
 				1E57185A1EA870D1000CD7C9 /* GoogleService-Info.plist */,
 				1E019F271E059415001733D0 /* AppDelegate.swift */,
 				1E019F291E059415001733D0 /* ViewController.swift */,
@@ -126,8 +128,13 @@
 				TargetAttributes = {
 					1E019F231E059414001733D0 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = PD76F94B45;
+						DevelopmentTeam = 3TS47S66YP;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -339,12 +346,14 @@
 			baseConfigurationReference = 6012519158C0F4C686F08286 /* Pods-stupidStatusApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PD76F94B45;
+				CODE_SIGN_ENTITLEMENTS = stupidStatusApp/stupidStatusApp.entitlements;
+				DEVELOPMENT_TEAM = 3TS47S66YP;
 				INFOPLIST_FILE = stupidStatusApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ryandonohue.stupidStatusApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -353,12 +362,14 @@
 			baseConfigurationReference = 0BAAA25616CA45F462175072 /* Pods-stupidStatusApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PD76F94B45;
+				CODE_SIGN_ENTITLEMENTS = stupidStatusApp/stupidStatusApp.entitlements;
+				DEVELOPMENT_TEAM = 3TS47S66YP;
 				INFOPLIST_FILE = stupidStatusApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ryandonohue.stupidStatusApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

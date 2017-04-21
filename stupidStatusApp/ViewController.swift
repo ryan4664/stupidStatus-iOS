@@ -25,9 +25,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //TEST
-        bannerAd.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        //bannerAd.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         //PROD
-//        bannerAd.adUnitID = "ca-app-pub-2784831729284923/8946119498"
+        bannerAd.adUnitID = "ca-app-pub-2784831729284923/8946119498"
         bannerAd.rootViewController = self
         bannerAd.load(GADRequest())
         getStatus()
