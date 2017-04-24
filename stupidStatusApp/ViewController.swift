@@ -16,11 +16,19 @@ class ViewController: UIViewController {
     @IBAction func getNewStatus(_ sender: Any) {
         getStatus()
     }
+    @IBAction func copyCurrentStatus(_ sender: Any) {
+        UIPasteboard.general.string = currentStatus.text! + " - Generated from Stupid Status!"
+        let alertController = UIAlertController(title: title, message: "Status Copied!", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
     @IBOutlet weak var bannerAd: GADBannerView!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

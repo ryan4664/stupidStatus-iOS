@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "stupidStatusApp/ViewController.swift"
-            timestampString = "514355936.257614"
+            timestampString = "514694878.064886"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "getStatus()"
             landmarkType = "7">
          </BreakpointContent>

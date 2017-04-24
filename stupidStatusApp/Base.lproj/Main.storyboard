@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad12_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,15 +18,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iRz-Zl-Oru">
-                                <rect key="frame" x="22" y="215.5" width="276" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iRz-Zl-Oru">
+                                <rect key="frame" x="22" y="216" width="276" height="241"/>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBi-nU-AUF" customClass="GADBannerView">
-                                <rect key="frame" x="352" y="1316" width="320" height="50"/>
+                                <rect key="frame" x="28" y="617" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="05c-D1-i7r"/>
@@ -35,20 +33,23 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stupid Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNe-tb-5bX">
-                                <rect key="frame" x="50" y="30" width="924" height="36"/>
+                                <rect key="frame" x="46" y="30" width="283" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0A-qE-Yr6">
-                                <rect key="frame" x="50" y="116" width="924" height="0.0"/>
+                                <rect key="frame" x="46" y="116" width="283" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loT-mh-CM2">
-                                <rect key="frame" x="374" y="1227" width="276" height="69"/>
+                                <rect key="frame" x="50" y="547" width="276" height="50"/>
                                 <color key="backgroundColor" red="0.20952406525611877" green="0.34997868537902832" blue="0.50367265939712524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4IN-Ey-M7t"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
                                 <state key="normal" title="Get New Stupid Status">
@@ -58,22 +59,42 @@
                                     <action selector="getNewStatus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WjA-Xg-3kL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYZ-pU-jDN">
+                                <rect key="frame" x="50" y="477" width="277" height="50"/>
+                                <color key="backgroundColor" red="0.20952406525611877" green="0.34997868537902832" blue="0.50367265939712524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="apd-Ea-AUG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                <state key="normal" title="Copy Stupid Status">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="copyCurrentStatus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lqq-dJ-y9k"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.13331398367881775" green="0.13334444165229797" blue="0.13331207633018494" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hBi-nU-AUF" firstAttribute="top" secondItem="loT-mh-CM2" secondAttribute="bottom" constant="20" id="20v-H6-2im"/>
-                            <constraint firstItem="hBi-nU-AUF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HSB-Yt-Bpz"/>
+                            <constraint firstItem="loT-mh-CM2" firstAttribute="top" secondItem="MYZ-pU-jDN" secondAttribute="bottom" constant="20" id="1Ob-s6-Grp"/>
+                            <constraint firstItem="hBi-nU-AUF" firstAttribute="top" secondItem="loT-mh-CM2" secondAttribute="bottom" constant="20" id="5Qd-so-KRf"/>
+                            <constraint firstItem="iRz-Zl-Oru" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="6" id="D8V-vS-KVb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hBi-nU-AUF" secondAttribute="bottom" id="JRs-mT-UoK"/>
-                            <constraint firstItem="dNe-tb-5bX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="LXs-sk-b4i"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dNe-tb-5bX" secondAttribute="trailing" constant="30" id="dYE-Rc-piC"/>
+                            <constraint firstItem="loT-mh-CM2" firstAttribute="centerX" secondItem="hBi-nU-AUF" secondAttribute="centerX" id="MMu-cd-smi"/>
+                            <constraint firstItem="MYZ-pU-jDN" firstAttribute="top" secondItem="iRz-Zl-Oru" secondAttribute="bottom" constant="20" id="NmE-6B-f9E"/>
+                            <constraint firstItem="dNe-tb-5bX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="UU6-sG-5YS"/>
+                            <constraint firstItem="MYZ-pU-jDN" firstAttribute="leading" secondItem="loT-mh-CM2" secondAttribute="leading" id="c74-02-UVD"/>
+                            <constraint firstItem="dNe-tb-5bX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="diy-CE-oui"/>
                             <constraint firstItem="i0A-qE-Yr6" firstAttribute="top" secondItem="dNe-tb-5bX" secondAttribute="bottom" constant="50" id="erg-XT-ZZg"/>
-                            <constraint firstItem="i0A-qE-Yr6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="gLZ-mO-via"/>
-                            <constraint firstItem="dNe-tb-5bX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nEw-5a-9uB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="i0A-qE-Yr6" secondAttribute="trailing" constant="30" id="s6k-KM-hy2"/>
+                            <constraint firstItem="MYZ-pU-jDN" firstAttribute="centerX" secondItem="loT-mh-CM2" secondAttribute="centerX" id="fx7-g7-63h"/>
+                            <constraint firstItem="loT-mh-CM2" firstAttribute="top" secondItem="MYZ-pU-jDN" secondAttribute="bottom" constant="20" id="h7g-K5-EVb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iRz-Zl-Oru" secondAttribute="trailing" constant="61" id="hmh-0Y-uOZ"/>
+                            <constraint firstItem="iRz-Zl-Oru" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="216" id="ig3-IM-mBG"/>
+                            <constraint firstItem="dNe-tb-5bX" firstAttribute="trailing" secondItem="i0A-qE-Yr6" secondAttribute="trailing" id="msY-YJ-Xl5"/>
+                            <constraint firstItem="hBi-nU-AUF" firstAttribute="top" secondItem="loT-mh-CM2" secondAttribute="bottom" constant="20" id="rsj-fW-OJu"/>
                             <constraint firstItem="dNe-tb-5bX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="ue6-B0-YOe"/>
-                            <constraint firstItem="i0A-qE-Yr6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xG3-h0-601"/>
-                            <constraint firstItem="dNe-tb-5bX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zEi-Go-9XJ"/>
-                            <constraint firstItem="loT-mh-CM2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zpm-hp-swA"/>
+                            <constraint firstItem="dNe-tb-5bX" firstAttribute="leading" secondItem="i0A-qE-Yr6" secondAttribute="leading" id="xnO-sm-LkK"/>
+                            <constraint firstItem="dNe-tb-5bX" firstAttribute="centerX" secondItem="loT-mh-CM2" secondAttribute="centerX" id="yUx-Qe-LfK"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -84,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="136.25"/>
+            <point key="canvasLocation" x="133.59999999999999" y="135.38230884557723"/>
         </scene>
     </scenes>
 </document>

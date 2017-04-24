@@ -349,6 +349,7 @@
 				CODE_SIGN_ENTITLEMENTS = stupidStatusApp/stupidStatusApp.entitlements;
 				DEVELOPMENT_TEAM = 3TS47S66YP;
 				INFOPLIST_FILE = stupidStatusApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ryandonohue.stupidStatusApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -365,6 +366,7 @@
 				CODE_SIGN_ENTITLEMENTS = stupidStatusApp/stupidStatusApp.entitlements;
 				DEVELOPMENT_TEAM = 3TS47S66YP;
 				INFOPLIST_FILE = stupidStatusApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ryandonohue.stupidStatusApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
