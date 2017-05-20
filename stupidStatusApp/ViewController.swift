@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     
     func getStatus() -> Void {
         
-        let url = URL(string: "http://stupidstat.us/api/user/status")
+        let url = URL(string: "http://138.197.131.230:9091/status")
         
         let task = URLSession.shared.dataTask(with: url!) { data, response, error in
             guard error == nil else {
